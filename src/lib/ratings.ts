@@ -3,7 +3,7 @@ export const ratingBranches = [
   "مول البوستان - الدور الثاني - مصر",
   "مول البوستان - الدور التاسع - مصر",
   "Ezone - مدينه نصر - مصر",
-  "مدينةالشارقة - الامارات",
+  "مدينة الشارقة - الامارات",
 ] as const;
 
 export type RatingBranch = (typeof ratingBranches)[number];
