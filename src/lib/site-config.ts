@@ -23,8 +23,10 @@ export const siteConfig = {
       name: "Abu Elmagd Computers — UAE",
       country: "الإمارات",
       address: "Sharjah, Industrial Area 5, Warehouse 4.",
-      mapsUrl: "https://www.google.com/maps/search/?api=1&query=Sharjah%20Industrial%20Area%205%20Warehouse%204",
-      embedUrl: "https://www.google.com/maps?q=Sharjah%20Industrial%20Area%205%20Warehouse%204&output=embed",
+      mapsUrl:
+        "https://www.google.com/maps/search/?api=1&query=Sharjah%20Industrial%20Area%205%20Warehouse%204",
+      embedUrl:
+        "https://www.google.com/maps?q=Sharjah%20Industrial%20Area%205%20Warehouse%204&output=embed",
     },
   ],
 } as const;

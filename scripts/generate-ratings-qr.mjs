@@ -12,9 +12,13 @@ const branches = [
 
 await mkdir("qr", { recursive: true });
 for (const [filename, branch] of branches) {
-  await QRCode.toFile(`qr/${filename}.png`, `https://abuelmagd.com/rate?branch=${encodeURIComponent(branch)}`, {
-    width: 1600,
-    margin: 4,
-    errorCorrectionLevel: "H",
-  });
+  await QRCode.toFile(
+    `qr/${filename}.png`,
+    `https://abuelmagd.com/rate?branch=${encodeURIComponent(branch)}`,
+    {
+      width: 1600,
+      margin: 4,
+      errorCorrectionLevel: "H",
+    },
+  );
 }

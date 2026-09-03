@@ -26,13 +26,19 @@ export function Work() {
     <section id="work" className="relative w-full px-0 py-24 sm:py-32">
       <div className="w-full">
         <div className="min-w-0 px-4 text-center">
-          <h2 className="text-4xl font-medium tracking-tight sm:text-5xl">
-            شغالين ومبنوقفش !
-          </h2>
+          <h2 className="text-4xl font-medium tracking-tight sm:text-5xl">شغالين ومبنوقفش !</h2>
         </div>
 
-        <div className="product-carousel mt-10 flex w-full items-center gap-2 px-2 sm:gap-4 sm:px-6" dir="ltr">
-          <button type="button" aria-label="السابق" onClick={() => scrollBy(-1)} className="carousel-arrow">
+        <div
+          className="product-carousel mt-10 flex w-full items-center gap-2 px-2 sm:gap-4 sm:px-6"
+          dir="ltr"
+        >
+          <button
+            type="button"
+            aria-label="السابق"
+            onClick={() => scrollBy(-1)}
+            className="carousel-arrow"
+          >
             <ArrowLeft aria-hidden="true" className="size-5" />
           </button>
           <div
@@ -74,7 +80,12 @@ export function Work() {
               </article>
             ))}
           </div>
-          <button type="button" aria-label="التالي" onClick={() => scrollBy(1)} className="carousel-arrow">
+          <button
+            type="button"
+            aria-label="التالي"
+            onClick={() => scrollBy(1)}
+            className="carousel-arrow"
+          >
             <ArrowRight aria-hidden="true" className="size-5" />
           </button>
         </div>

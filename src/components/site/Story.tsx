@@ -9,9 +9,7 @@ export function Story() {
   return (
     <section id="story" className="relative px-4 py-28 sm:py-40">
       <div className="mx-auto max-w-5xl text-center">
-        <h2
-          className="text-4xl leading-[1.35] font-medium tracking-tight sm:text-6xl"
-        >
+        <h2 className="text-4xl leading-[1.35] font-medium tracking-tight sm:text-6xl">
           رحلة بدأت من{" "}
           <span className="relative inline-block">
             <span className="rgb-outline">13 سنة</span>
@@ -25,20 +23,14 @@ export function Story() {
           </span>{" "}
           ولسه مكملين
         </h2>
-        <p
-          className="body-copy mx-auto mt-8 max-w-2xl text-muted-foreground"
-        >
-          بدأنا بمحل صغير وشغف كبير بالتكنولوجيا، وكل جهاز بيخرج من عندنا بيتفحص
-          وبيتجهز كأنه ليّنا. النهارده بقى عندنا فروع وعملاء في مصر والإمارات،
-          ولسه المشوار مكمل.
+        <p className="body-copy mx-auto mt-8 max-w-2xl text-muted-foreground">
+          بدأنا بمحل صغير وشغف كبير بالتكنولوجيا، وكل جهاز بيخرج من عندنا بيتفحص وبيتجهز كأنه ليّنا.
+          النهارده بقى عندنا فروع وعملاء في مصر والإمارات، ولسه المشوار مكمل.
         </p>
 
         <div className="mt-16 grid grid-cols-2 gap-4 sm:grid-cols-4">
           {stats.map((s, i) => (
-            <div
-              key={s.label}
-              className="glass px-4 py-6"
-            >
+            <div key={s.label} className="glass px-4 py-6">
               <div className="text-3xl font-medium tracking-tight">{s.value}</div>
               <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
             </div>

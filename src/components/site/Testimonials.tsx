@@ -61,9 +61,7 @@ export function Testimonials() {
   return (
     <section id="reviews" className="relative overflow-hidden py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-4 text-center">
-        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl">
-          آراء عملائنا عننا
-        </h2>
+        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl">آراء عملائنا عننا</h2>
       </div>
 
       <div className="mt-12 space-y-5">

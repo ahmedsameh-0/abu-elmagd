@@ -21,8 +21,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "أبو المجد كمبيوتر | أجهزة ولابتوبات بضمان" },
       {
         property: "og:description",
-        content:
-          "أجهزة كمبيوتر ولابتوبات مستوردة بضمان حقيقي وخبرة 13 سنة. فروع في مصر والإمارات.",
+        content: "أجهزة كمبيوتر ولابتوبات مستوردة بضمان حقيقي وخبرة 13 سنة. فروع في مصر والإمارات.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
