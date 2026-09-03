@@ -1,10 +1,9 @@
 export const ratingBranches = [
-  "Third Branch",
-  "Second Branch",
-  "Ninth Branch",
-  "Mall El-Bostan",
-  "Ezone",
-  "UAE Branch",
+  "مول البوستان - الدور الثالث - مصر",
+  "مول البوستان - الدور الثاني - مصر",
+  "مول البوستان - الدور التاسع - مصر",
+  "Ezone - مدينه نصر - مصر",
+  "مدينةالشارقة - الامارات",
 ] as const;
 
 export type RatingBranch = (typeof ratingBranches)[number];
