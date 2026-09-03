@@ -3,8 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export function Branches() {
   const [activeId, setActiveId] = useState<string>(siteConfig.branches[0].id);
-  const active =
-    siteConfig.branches.find((b) => b.id === activeId) ?? siteConfig.branches[0];
+  const active = siteConfig.branches.find((b) => b.id === activeId) ?? siteConfig.branches[0];
 
   return (
     <section id="branches" className="relative px-4 py-24 sm:py-32">
@@ -70,9 +69,7 @@ export function Branches() {
             ) : (
               <div className="hero-glow flex h-full min-h-[320px] flex-col items-center justify-center gap-3 p-8 text-center lg:min-h-[420px]">
                 <div className="glass-soft px-4 py-2 text-sm">{active.name}</div>
-                <p className="max-w-xs text-sm text-muted-foreground">
-                  {active.address}
-                </p>
+                <p className="max-w-xs text-sm text-muted-foreground">{active.address}</p>
                 <p className="text-xs text-muted-foreground/70">
                   ابعتلي رابط جوجل مابس للفرع وهيظهر هنا مباشرة.
                 </p>

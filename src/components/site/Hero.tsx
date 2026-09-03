@@ -22,25 +22,18 @@ export function Hero() {
         <h1 className="hero-title flex flex-wrap items-center justify-center gap-x-5">
           {words.map((w, i) => {
             return (
-              <span
-                key={w}
-                className="inline-block"
-              >
+              <span key={w} className="inline-block">
                 {w}
               </span>
             );
           })}
         </h1>
 
-        <p
-          className="body-copy mx-auto mt-6 max-w-xl text-muted-foreground"
-        >
+        <p className="body-copy mx-auto mt-6 max-w-xl text-muted-foreground">
           أجهزة كمبيوتر ولابتوبات مستوردة بضمان حقيقي، وخبرة 13 سنة في السوق.
         </p>
 
-        <div
-          className="mt-10 flex flex-wrap items-center justify-center gap-3"
-        >
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <a
             href="#work"
             className="site-button site-button-hover rounded-lg px-6 py-3 text-sm font-semibold hover:scale-[1.03]"

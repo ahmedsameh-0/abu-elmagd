@@ -59,7 +59,11 @@
   --glass-border: 1px solid rgba(255, 255, 255, 0.72);
   --glass-blur: blur(40px);
   --glass-shadow: 4px 4px 5px rgba(0, 0, 0, 0.32);
-  --hero-glow: radial-gradient(ellipse 90% 70% at 50% 0%, oklch(0.72 0.15 250 / 0.35), transparent 70%);
+  --hero-glow: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    oklch(0.72 0.15 250 / 0.35),
+    transparent 70%
+  );
 }
 
 .dark {
@@ -84,12 +88,20 @@
   --glass-border: 1px solid rgba(255, 255, 255, 0.2);
   --glass-blur: blur(40px);
   --glass-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
-  --hero-glow: radial-gradient(ellipse 90% 70% at 50% 0%, oklch(0.55 0.19 255 / 0.45), transparent 70%);
+  --hero-glow: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    oklch(0.55 0.19 255 / 0.45),
+    transparent 70%
+  );
 }
 
 @layer base {
-  * { border-color: var(--color-border); }
-  html { scroll-behavior: smooth; }
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -136,8 +148,12 @@
     word-break: break-word;
   }
   @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
       animation-duration: 0.001ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.001ms !important;
@@ -155,7 +171,10 @@
   border-radius: 16px;
   padding: 25px;
   box-shadow: var(--glass-shadow);
-  transition: background 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+  transition:
+    background 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
 }
 
 @utility glass-soft {
@@ -164,7 +183,10 @@
   -webkit-backdrop-filter: blur(40px);
   border: var(--glass-border);
   border-radius: 16px;
-  transition: background 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+  transition:
+    background 280ms ease,
+    border-color 280ms ease,
+    box-shadow 280ms ease;
 }
 
 .glass:hover,
@@ -173,7 +195,9 @@
 .glass-soft:focus-within {
   background: rgba(220, 232, 255, 0.72);
   border-color: rgba(67, 113, 230, 0.72);
-  box-shadow: 0 0 0 1px rgba(67, 113, 230, 0.55), 0 8px 22px rgba(67, 113, 230, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(67, 113, 230, 0.55),
+    0 8px 22px rgba(67, 113, 230, 0.2);
 }
 
 .dark .glass {
@@ -213,7 +237,9 @@
   border: 0;
   background: transparent;
   color: var(--color-foreground);
-  transition: color 200ms ease, transform 200ms ease;
+  transition:
+    color 200ms ease,
+    transform 200ms ease;
 }
 
 .carousel-arrow:hover {
@@ -258,7 +284,9 @@
 :root:not(.dark) .glass-soft:focus-within {
   background: rgba(220, 232, 255, 0.72);
   border-color: rgba(67, 113, 230, 0.72);
-  box-shadow: 0 0 0 1px rgba(67, 113, 230, 0.55), 0 8px 22px rgba(67, 113, 230, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(67, 113, 230, 0.55),
+    0 8px 22px rgba(67, 113, 230, 0.2);
 }
 
 .mobile-nav {
@@ -272,28 +300,46 @@
   box-shadow: var(--glass-shadow);
 }
 
-@utility hero-glow { background-image: var(--hero-glow); }
+@utility hero-glow {
+  background-image: var(--hero-glow);
+}
 
 @utility site-button {
   background: var(--button-bg);
   color: var(--button-fg);
-  transition: background-color 200ms ease, transform 200ms ease;
+  transition:
+    background-color 200ms ease,
+    transform 200ms ease;
 }
 
 @utility site-button-hover {
-  &:hover { background: var(--button-hover); }
+  &:hover {
+    background: var(--button-hover);
+  }
 }
 
 @utility rgb-outline {
   position: relative;
-  background: linear-gradient(100deg, oklch(0.7 0.2 20), oklch(0.75 0.19 90), oklch(0.72 0.18 180), oklch(0.68 0.2 285), oklch(0.7 0.2 20)) 0 0 / 300% 100%;
+  background: linear-gradient(
+      100deg,
+      oklch(0.7 0.2 20),
+      oklch(0.75 0.19 90),
+      oklch(0.72 0.18 180),
+      oklch(0.68 0.2 285),
+      oklch(0.7 0.2 20)
+    )
+    0 0 / 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: rgb-pan 8s linear infinite;
 }
 
-@keyframes rgb-pan { to { background-position: 300% 0; } }
+@keyframes rgb-pan {
+  to {
+    background-position: 300% 0;
+  }
+}
 
 @utility marquee-track {
   display: flex;
@@ -302,13 +348,21 @@
 }
 
 @keyframes marquee-left {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
 @keyframes marquee-right {
-  from { transform: translate3d(-50%, 0, 0); }
-  to { transform: translate3d(0, 0, 0); }
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .social-icon {
@@ -326,7 +380,8 @@
   inset: 0;
   z-index: 0;
   content: "Abu Elmagd";
-  background: linear-gradient(100deg, #ef4444, #facc15, #22c55e, #38bdf8, #a78bfa, #ef4444) 0 0 / 300% 100%;
+  background: linear-gradient(100deg, #ef4444, #facc15, #22c55e, #38bdf8, #a78bfa, #ef4444) 0 0 /
+    300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -337,22 +392,72 @@
 }
 
 @keyframes footer-rgb-pan {
-  to { background-position: 300% 0; }
+  to {
+    background-position: 300% 0;
+  }
 }
 
 @keyframes footer-rgb-pulse {
-  0%, 100% { text-shadow: 0 0 0 rgba(56, 189, 248, 0); }
-  50% { text-shadow: 0 0 7px rgba(167, 139, 250, 0.1); }
+  0%,
+  100% {
+    text-shadow: 0 0 0 rgba(56, 189, 248, 0);
+  }
+  50% {
+    text-shadow: 0 0 7px rgba(167, 139, 250, 0.1);
+  }
 }
 
-
-.marquee-left { animation: marquee-left var(--marquee-duration, 45s) linear infinite; }
-.marquee-right { animation: marquee-right var(--marquee-duration, 45s) linear infinite; }
+.marquee-left {
+  animation: marquee-left var(--marquee-duration, 45s) linear infinite;
+}
+.marquee-right {
+  animation: marquee-right var(--marquee-duration, 45s) linear infinite;
+}
 .marquee-paused:hover .marquee-left,
-.marquee-paused:hover .marquee-right { animation-play-state: paused; }
+.marquee-paused:hover .marquee-right {
+  animation-play-state: paused;
+}
 
 @keyframes float-slow {
-  0%, 100% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(0, -12px, 0); }
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
 }
-.float-slow { animation: float-slow 7s ease-in-out infinite; }
+.float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes splash-bar-swing {
+  0% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+  50% {
+    left: 0%;
+    transform: translateX(0%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
+
+.animate-splash-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 35%;
+  animation: splash-bar-swing 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-splash-bar {
+    animation: none !important;
+    left: 32.5% !important;
+    transform: none !important;
+  }
+}

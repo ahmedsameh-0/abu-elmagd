@@ -24,13 +24,20 @@ export function Navbar() {
           <a href="#top" aria-label="الرئيسية">
             <img src={logo} alt="أبو المجد كمبيوتر" className="h-10 w-10 rounded-xl object-cover" />
           </a>
-          <a href="tel:01277770535" className="site-button site-button-hover rounded-lg px-4 py-2 text-sm font-semibold">
+          <a
+            href="tel:01277770535"
+            className="site-button site-button-hover rounded-lg px-4 py-2 text-sm font-semibold"
+          >
             اتصل بنا
           </a>
         </nav>
         <nav className="mobile-nav fixed inset-x-3 bottom-3 z-50 flex items-center justify-around gap-1 px-2 py-2">
           {links.map(({ href, label, icon: Icon }) => (
-            <a key={href} href={href} className="flex min-w-0 flex-1 flex-col items-center gap-1 rounded-xl px-1 py-2 text-[10px] font-medium text-muted-foreground transition-colors hover:bg-foreground/10 hover:text-foreground">
+            <a
+              key={href}
+              href={href}
+              className="flex min-w-0 flex-1 flex-col items-center gap-1 rounded-xl px-1 py-2 text-[10px] font-medium text-muted-foreground transition-colors hover:bg-foreground/10 hover:text-foreground"
+            >
               <Icon aria-hidden="true" className="size-5" strokeWidth={1.8} />
               <span className="truncate">{label}</span>
             </a>

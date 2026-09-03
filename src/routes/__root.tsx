@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import logo from "@/assets/logo.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { PageTransitionSplash } from "@/components/PageTransitionSplash";
 
 function NotFoundComponent() {
   return (
@@ -79,10 +80,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Admin Dashboard" },
-      { name: "description", content: "Abu Al-Majd Computer — 13 years of experience in selling and supplying imported computers and laptops with a warranty; branches in Egypt and the UAE." },
+      {
+        name: "description",
+        content:
+          "Abu Al-Majd Computer — 13 years of experience in selling and supplying imported computers and laptops with a warranty; branches in Egypt and the UAE.",
+      },
       { name: "author", content: "Ahmed Sameh" },
       { property: "og:title", content: "Admin Dashboard" },
-      { property: "og:description", content: "Abu Al-Majd Computer — 13 years of experience in selling and supplying imported computers and laptops with a warranty; branches in Egypt and the UAE." },
+      {
+        property: "og:description",
+        content:
+          "Abu Al-Majd Computer — 13 years of experience in selling and supplying imported computers and laptops with a warranty; branches in Egypt and the UAE.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
@@ -120,6 +129,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <PageTransitionSplash />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>
